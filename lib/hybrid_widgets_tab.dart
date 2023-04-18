@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
 
-class ThirdTab extends StatelessWidget {
+class HybridWidgetsTab extends StatelessWidget {
+  const HybridWidgetsTab({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('This is the Notifications tab'),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Center(
+          child: Column(
+            children: const [
+              Tab(
+                text: "Tab",
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

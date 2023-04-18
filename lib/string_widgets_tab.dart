@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
 
-class SecondTab extends StatelessWidget {
+class StringWidgetsTab extends StatelessWidget {
+  const StringWidgetsTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('This is the Search tab'),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: const [
+          Text("Text widget"),
+          SizedBox(height: 16),
+          SelectableText("SelectableText widget"),
+          SizedBox(height: 16),
+          Tooltip(
+            height: 100,
+            message: "Tooltip",
+            child: Text("I show a tooltip, long press me"),
+          ),
+        ],
+      ),
     );
   }
 }

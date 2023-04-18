@@ -1,10 +1,26 @@
 import 'package:flutter/material.dart';
 
-class FourthTab extends StatelessWidget {
+class TextInputWidgetsTab extends StatelessWidget {
+  const TextInputWidgetsTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('This is the Settings tab'),
+      child: Column(children: [
+        const TextField(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'TextField widget',
+          ),
+        ),
+        const SizedBox(height: 16),
+        TextFormField(
+          decoration: const InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'TextFormField widget',
+          ),
+        ),
+      ]),
     );
   }
 }

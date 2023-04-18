@@ -33,17 +33,33 @@ class MyHomePage extends StatefulWidget {
 
 class MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
+  String _title = 'Strings defined in its own widgets';
 
-  final List<Widget> _children = [
-    FirstTab(),
-    SecondTab(),
-    ThirdTab(),
-    FourthTab(),
+  final List<Widget> _children = const [
+    StringWidgetsTab(),
+    StandardWidgetsTab(),
+    HybridWidgetsTab(),
+    TextInputWidgetsTab(),
   ];
 
   void onTabTapped(int index) {
     setState(() {
       _currentIndex = index;
+
+      switch (index) {
+        case 0:
+          _title = 'Strings defined in its own widgets';
+          break;
+        case 1:
+          _title = 'Strings defined in child widgets';
+          break;
+        case 2:
+          _title = 'Strings defined in either way';
+          break;
+        default:
+          _title = 'String input widgets';
+          break;
+      }
     });
   }
 
@@ -51,7 +67,7 @@ class MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dynamic Size Text Demo'),
+        title: Text(_title),
       ),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -61,13 +77,13 @@ class MyHomePageState extends State<MyHomePage> {
         items: const [
           BottomNavigationBarItem(
             backgroundColor: Colors.blue,
-            icon: Icon(Icons.home),
-            label: 'Standard',
+            icon: Icon(Icons.text_fields),
+            label: 'String',
           ),
           BottomNavigationBarItem(
             backgroundColor: Colors.blue,
-            icon: Icon(Icons.text_fields),
-            label: 'String',
+            icon: Icon(Icons.home),
+            label: 'Standard',
           ),
           BottomNavigationBarItem(
             backgroundColor: Colors.blue,
