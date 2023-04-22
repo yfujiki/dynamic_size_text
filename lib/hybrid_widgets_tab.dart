@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'my_text.dart';
+
 class HybridWidgetsTab extends StatefulWidget {
   const HybridWidgetsTab({super.key});
 
@@ -40,7 +42,7 @@ class _HybridWidgetsTabState extends State<HybridWidgetsTab>
                     text: "Tab defined by a string",
                   ),
                   Tab(
-                    child: Text(
+                    child: MyText(
                       "Tab defined by a Text widget",
                       style: TextStyle(fontSize: 16),
                     ),

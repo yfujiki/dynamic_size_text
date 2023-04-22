@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'my_text.dart';
+
 class StandardWidgetsTab extends StatelessWidget {
   const StandardWidgetsTab({super.key});
 
@@ -10,7 +12,7 @@ class StandardWidgetsTab extends StatelessWidget {
       children: [
         const SizedBox(height: 16),
         TextButton(
-          child: const Text("TextButton widget"),
+          child: const MyText("TextButton widget"),
           onPressed: () {
             // ignore: avoid_print
             print("Button tapped");
@@ -18,7 +20,7 @@ class StandardWidgetsTab extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         ElevatedButton(
-          child: const Text("ElevatedButton widget"),
+          child: const MyText("ElevatedButton widget"),
           onPressed: () {
             // ignore: avoid_print
             print("Button tapped");
@@ -27,7 +29,7 @@ class StandardWidgetsTab extends StatelessWidget {
         const SizedBox(height: 16),
         const ListTile(
           leading: Icon(Icons.list),
-          title: Text("ListTile widget"),
+          title: MyText("ListTile widget"),
           tileColor: Colors.grey,
         ),
         const SizedBox(height: 16),
