@@ -1,3 +1,4 @@
+import 'package:dynamic_size_text/exception_widgets_tab.dart';
 import 'package:flutter/material.dart';
 
 import 'hybrid_widgets_tab.dart';
@@ -40,6 +41,7 @@ class MyHomePageState extends State<MyHomePage> {
     StandardWidgetsTab(),
     HybridWidgetsTab(),
     TextInputWidgetsTab(),
+    ExceptionWidgetsTab()
   ];
 
   void onTabTapped(int index) {
@@ -56,8 +58,11 @@ class MyHomePageState extends State<MyHomePage> {
         case 2:
           _title = 'Strings defined in either way';
           break;
-        default:
+        case 3:
           _title = 'String input widgets';
+          break;
+        default:
+          _title = 'Exception widgets';
           break;
       }
     });
@@ -94,6 +99,11 @@ class MyHomePageState extends State<MyHomePage> {
             backgroundColor: Colors.blue,
             icon: Icon(Icons.edit),
             label: 'Input',
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: Colors.blue,
+            icon: Icon(Icons.import_export),
+            label: 'Exception',
           ),
         ],
       ),
