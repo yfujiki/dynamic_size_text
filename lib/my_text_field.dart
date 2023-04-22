@@ -42,7 +42,7 @@ class MyTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final fontSize = style?.fontSize == null
-        ? 14 / MediaQuery.textScaleFactorOf(context)
+        ? 16 / MediaQuery.textScaleFactorOf(context)
         : style!.fontSize! / MediaQuery.textScaleFactorOf(context);
     final textStyle = style == null
         ? TextStyle(fontSize: fontSize)
