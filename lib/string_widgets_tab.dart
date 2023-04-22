@@ -9,6 +9,7 @@ class StringWidgetsTab extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: const [
+          SizedBox(height: 16),
           Text("Text widget"),
           SizedBox(height: 16),
           SelectableText("SelectableText widget"),

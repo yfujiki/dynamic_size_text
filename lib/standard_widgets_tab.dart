@@ -8,6 +8,7 @@ class StandardWidgetsTab extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        const SizedBox(height: 16),
         TextButton(
           child: const Text("TextButton widget"),
           onPressed: () {

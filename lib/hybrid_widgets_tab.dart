@@ -11,6 +11,7 @@ class HybridWidgetsTab extends StatelessWidget {
         Center(
           child: Column(
             children: const [
+              SizedBox(height: 16),
               Tab(
                 text: "Tab",
               ),
