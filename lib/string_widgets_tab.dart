@@ -10,14 +10,23 @@ class StringWidgetsTab extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: const [
           SizedBox(height: 16),
-          Text("Text widget"),
+          Text("Text widget", style: TextStyle(fontSize: 16)),
           SizedBox(height: 16),
-          SelectableText("SelectableText widget"),
+          SelectableText("SelectableText widget",
+              style: TextStyle(fontSize: 24)),
           SizedBox(height: 16),
           Tooltip(
             height: 100,
             message: "Tooltip",
-            child: Text("I show a tooltip, long press me"),
+            child: Text(
+              "I show a tooltip, long press me",
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.blue,
+                decoration: TextDecoration.underline,
+                decorationStyle: TextDecorationStyle.solid,
+              ),
+            ),
           ),
         ],
       ),
