@@ -40,6 +40,13 @@ class MyTooltip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final fontSize = textStyle?.fontSize == null
+        ? 14 / MediaQuery.textScaleFactorOf(context)
+        : textStyle!.fontSize! / MediaQuery.textScaleFactorOf(context);
+    final style = textStyle == null
+        ? TextStyle(fontSize: fontSize)
+        : textStyle!.copyWith(fontSize: fontSize);
+
     return Tooltip(
       message: message,
       richMessage: richMessage,
@@ -50,7 +57,7 @@ class MyTooltip extends StatelessWidget {
       preferBelow: preferBelow,
       excludeFromSemantics: excludeFromSemantics,
       decoration: decoration,
-      textStyle: textStyle,
+      textStyle: style,
       waitDuration: waitDuration,
       showDuration: showDuration,
       triggerMode: triggerMode,

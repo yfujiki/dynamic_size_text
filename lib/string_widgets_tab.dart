@@ -22,6 +22,10 @@ class StringWidgetsTab extends StatelessWidget {
           MyTooltip(
             height: 100,
             message: "Tooltip",
+            textStyle: TextStyle(
+              fontSize: 14,
+              color: Colors.white,
+            ),
             child: MyText(
               "I show a tooltip, long press me",
               style: TextStyle(
