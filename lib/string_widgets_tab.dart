@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'my_selectable_text.dart';
-import 'my_text.dart';
-import 'my_tooltip.dart';
+import 'custom_controls/my_selectable_text.dart';
+import 'custom_controls/my_text.dart';
+import 'custom_controls/my_tooltip.dart';
 
 class StringWidgetsTab extends StatelessWidget {
   const StringWidgetsTab({super.key});

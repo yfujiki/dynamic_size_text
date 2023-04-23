@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'my_text.dart';
+import 'custom_controls/my_text.dart';
 
 class HybridWidgetsTab extends StatefulWidget {
   const HybridWidgetsTab({super.key});

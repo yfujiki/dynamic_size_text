@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'my_text_field.dart';
-import 'my_text_form_field.dart';
+import 'custom_controls/my_text_field.dart';
+import 'custom_controls/my_text_form_field.dart';
 
 class TextInputWidgetsTab extends StatelessWidget {
   const TextInputWidgetsTab({super.key});
