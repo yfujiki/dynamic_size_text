@@ -6,7 +6,7 @@ class MyTextField extends StatelessWidget {
   final FocusNode? focusNode;
   final TextEditingController? controller;
   final String? hintText;
-  final bool? isPassword;
+  final bool? obscureText;
   final bool? isMultiline;
   final VoidCallback? onEditingComplete;
   final Function(String)? onChanged;
@@ -26,7 +26,7 @@ class MyTextField extends StatelessWidget {
     this.focusNode,
     this.scrollPadding,
     this.isMultiline,
-    this.isPassword,
+    this.obscureText,
     this.onEditingComplete,
     this.minLines,
     this.maxLines,
@@ -54,7 +54,7 @@ class MyTextField extends StatelessWidget {
       controller: controller,
       style: textStyle,
       onChanged: onChanged,
-      obscureText: isPassword ?? false,
+      obscureText: obscureText ?? false,
       minLines: minLines,
       maxLines: maxLines ?? 1,
       onEditingComplete: onEditingComplete,

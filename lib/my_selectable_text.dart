@@ -10,8 +10,8 @@ class MySelectableText extends StatelessWidget {
   final TextAlign? textAlign;
   final TextDirection? textDirection;
   final Locale? locale;
-  final bool showCursor = false;
-  final bool autofocus = false;
+  final bool showCursor;
+  final bool autofocus;
   final int? minLines;
   final int? maxLines;
   final double cursorWidth;
@@ -42,6 +42,8 @@ class MySelectableText extends StatelessWidget {
     this.textAlign,
     this.textDirection,
     this.locale,
+    this.showCursor = false,
+    this.autofocus = false,
     this.minLines,
     this.maxLines,
     this.cursorWidth = 2.0,

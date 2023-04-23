@@ -6,10 +6,10 @@ class MyTextFormField extends StatelessWidget {
   final FocusNode? focusNode;
   final TextEditingController? controller;
   final String? hintText;
-  final bool? isPassword;
+  final bool? obscureText;
   final bool? isMultiline;
   final VoidCallback? onEditingComplete;
-  final Function(String)? onSubmitted;
+  final Function(String)? onFieldSubmitted;
   final Function(String)? onChanged;
   final int? minLines;
   final int? maxLines;
@@ -28,9 +28,9 @@ class MyTextFormField extends StatelessWidget {
     this.focusNode,
     this.scrollPadding,
     this.isMultiline,
-    this.isPassword,
+    this.obscureText,
     this.onEditingComplete,
-    this.onSubmitted,
+    this.onFieldSubmitted,
     this.minLines,
     this.maxLines,
     this.cursorColor,
@@ -58,12 +58,12 @@ class MyTextFormField extends StatelessWidget {
       controller: controller,
       style: textStyle,
       onChanged: onChanged,
-      obscureText: isPassword ?? false,
+      obscureText: obscureText ?? false,
       minLines: minLines,
       maxLines: maxLines ?? 1,
       onEditingComplete: onEditingComplete,
       validator: validator,
-      onFieldSubmitted: onSubmitted,
+      onFieldSubmitted: onFieldSubmitted,
       cursorColor: cursorColor,
       keyboardType: keyboardType,
       scrollPadding: scrollPadding ?? const EdgeInsets.all(20),
