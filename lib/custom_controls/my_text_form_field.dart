@@ -52,6 +52,13 @@ class MyTextFormField extends StatelessWidget {
         ? TextStyle(fontSize: fontSize)
         : style!.copyWith(fontSize: fontSize);
 
+    final labelStyle =
+        Theme.of(context).inputDecorationTheme.labelStyle ?? const TextStyle();
+
+    final decoration = this.decoration?.copyWith(
+          labelStyle: labelStyle.copyWith(fontSize: fontSize),
+        );
+
     return TextFormField(
       enabled: enabled,
       focusNode: focusNode,
