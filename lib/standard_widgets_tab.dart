@@ -12,7 +12,7 @@ class StandardWidgetsTab extends StatelessWidget {
       children: [
         const SizedBox(height: 16),
         TextButton(
-          child: const MyText("TextButton widget"),
+          child: const Text("TextButton widget"),
           onPressed: () {
             // ignore: avoid_print
             print("Button tapped");
@@ -20,7 +20,7 @@ class StandardWidgetsTab extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         ElevatedButton(
-          child: const MyText("ElevatedButton widget"),
+          child: const Text("ElevatedButton widget"),
           onPressed: () {
             // ignore: avoid_print
             print("Button tapped");
@@ -29,7 +29,7 @@ class StandardWidgetsTab extends StatelessWidget {
         const SizedBox(height: 16),
         const ListTile(
           leading: Icon(Icons.list),
-          title: MyText("ListTile widget"),
+          title: Text("ListTile widget"),
           tileColor: Colors.grey,
         ),
         const SizedBox(height: 16),

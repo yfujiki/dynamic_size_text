@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'custom_controls/my_selectable_text.dart';
-import 'custom_controls/my_text.dart';
-import 'custom_controls/my_tooltip.dart';
-
 class StringWidgetsTab extends StatelessWidget {
   const StringWidgetsTab({super.key});
 
@@ -14,19 +10,19 @@ class StringWidgetsTab extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(height: 16),
-          MyText("Text widget", style: TextStyle(fontSize: 16)),
+          Text("Text widget", style: TextStyle(fontSize: 16)),
           SizedBox(height: 16),
-          MySelectableText("SelectableText widget",
+          SelectableText("SelectableText widget",
               style: TextStyle(fontSize: 24)),
           SizedBox(height: 16),
-          MyTooltip(
+          Tooltip(
             height: 100,
             message: "Tooltip",
             textStyle: TextStyle(
               fontSize: 14,
               color: Colors.white,
             ),
-            child: MyText(
+            child: Text(
               "I show a tooltip, long press me",
               style: TextStyle(
                 fontSize: 16,

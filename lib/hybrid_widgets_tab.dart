@@ -42,7 +42,7 @@ class _HybridWidgetsTabState extends State<HybridWidgetsTab>
                     text: "Tab defined by a string",
                   ),
                   Tab(
-                    child: MyText(
+                    child: Text(
                       "Tab defined by a Text widget",
                       style: TextStyle(fontSize: 16),
                     ),

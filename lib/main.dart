@@ -1,6 +1,7 @@
 import 'package:dynamic_size_text/exception_widgets_tab.dart';
 import 'package:flutter/material.dart';
 
+import 'custom_controls/my_text.dart';
 import 'hybrid_widgets_tab.dart';
 import 'standard_widgets_tab.dart';
 import 'string_widgets_tab.dart';
@@ -72,9 +73,14 @@ class MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(_title),
+        title: MyText(_title),
       ),
-      body: _children[_currentIndex],
+      body: MediaQuery(
+        data: const MediaQueryData(
+          textScaler: TextScaler.linear(1.0),
+        ),
+        child: _children[_currentIndex],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.orange,
         onTap: onTabTapped,
