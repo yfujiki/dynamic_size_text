@@ -73,12 +73,11 @@ class MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: MyText(_title),
+        title: Text(_title),
       ),
       body: MediaQuery(
-        data: const MediaQueryData(
-          textScaler: TextScaler.linear(1.0),
-        ),
+        data: MediaQuery.of(context)
+            .copyWith(textScaler: const TextScaler.linear(1.0)),
         child: _children[_currentIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
