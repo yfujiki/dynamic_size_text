@@ -75,7 +75,7 @@ class MySelectableText extends StatelessWidget {
       strutStyle: strutStyle,
       textAlign: textAlign,
       textDirection: textDirection,
-      textScaleFactor: 1.0,
+      textScaler: const TextScaler.linear(1.0),
       showCursor: showCursor,
       autofocus: autofocus,
       minLines: minLines,

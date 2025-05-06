@@ -40,7 +40,7 @@ class MyText extends StatelessWidget {
         locale: locale,
         softWrap: softWrap,
         overflow: overflow,
-        textScaleFactor: 1.0,
+        textScaler: const TextScaler.linear(1.0),
         maxLines: maxLines,
         semanticsLabel: semanticsLabel,
         textWidthBasis: textWidthBasis,
