@@ -45,37 +45,28 @@ class MyTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final fontSize = style?.fontSize == null
-        ? 16 / MediaQuery.textScaleFactorOf(context)
-        : style!.fontSize! / MediaQuery.textScaleFactorOf(context);
-    final textStyle = style == null
-        ? TextStyle(fontSize: fontSize)
-        : style!.copyWith(fontSize: fontSize);
-
-    final labelStyle =
-        Theme.of(context).inputDecorationTheme.labelStyle ?? const TextStyle();
-
-    final decoration = this.decoration?.copyWith(
-          labelStyle: labelStyle.copyWith(fontSize: fontSize),
-        );
-
-    return TextFormField(
-      enabled: enabled,
-      focusNode: focusNode,
-      controller: controller,
-      style: textStyle,
-      onChanged: onChanged,
-      obscureText: obscureText ?? false,
-      minLines: minLines,
-      maxLines: maxLines ?? 1,
-      onEditingComplete: onEditingComplete,
-      validator: validator,
-      onFieldSubmitted: onFieldSubmitted,
-      cursorColor: cursorColor,
-      keyboardType: keyboardType,
-      scrollPadding: scrollPadding ?? const EdgeInsets.all(20),
-      decoration: decoration,
-      inputFormatters: inputFormatters,
+    return MediaQuery(
+      data: MediaQuery.of(context).copyWith(
+        textScaler: const TextScaler.linear(1.0),
+      ),
+      child: TextFormField(
+        enabled: enabled,
+        focusNode: focusNode,
+        controller: controller,
+        style: style,
+        onChanged: onChanged,
+        obscureText: obscureText ?? false,
+        minLines: minLines,
+        maxLines: maxLines ?? 1,
+        onEditingComplete: onEditingComplete,
+        validator: validator,
+        onFieldSubmitted: onFieldSubmitted,
+        cursorColor: cursorColor,
+        keyboardType: keyboardType,
+        scrollPadding: scrollPadding ?? const EdgeInsets.all(20),
+        decoration: decoration,
+        inputFormatters: inputFormatters,
+      ),
     );
   }
 }

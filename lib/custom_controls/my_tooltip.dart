@@ -40,30 +40,28 @@ class MyTooltip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final fontSize = textStyle?.fontSize == null
-        ? 14 / MediaQuery.textScaleFactorOf(context)
-        : textStyle!.fontSize! / MediaQuery.textScaleFactorOf(context);
-    final style = textStyle == null
-        ? TextStyle(fontSize: fontSize)
-        : textStyle!.copyWith(fontSize: fontSize);
-
-    return Tooltip(
-      message: message,
-      richMessage: richMessage,
-      height: height,
-      padding: padding,
-      margin: margin,
-      verticalOffset: verticalOffset,
-      preferBelow: preferBelow,
-      excludeFromSemantics: excludeFromSemantics,
-      decoration: decoration,
-      textStyle: style,
-      waitDuration: waitDuration,
-      showDuration: showDuration,
-      triggerMode: triggerMode,
-      enableFeedback: enableFeedback,
-      onTriggered: onTriggered,
-      child: child,
+    return MediaQuery(
+      data: MediaQuery.of(context).copyWith(
+        textScaler: const TextScaler.linear(1.0),
+      ),
+      child: Tooltip(
+        message: message,
+        richMessage: richMessage,
+        height: height,
+        padding: padding,
+        margin: margin,
+        verticalOffset: verticalOffset,
+        preferBelow: preferBelow,
+        excludeFromSemantics: excludeFromSemantics,
+        decoration: decoration,
+        textStyle: textStyle,
+        waitDuration: waitDuration,
+        showDuration: showDuration,
+        triggerMode: triggerMode,
+        enableFeedback: enableFeedback,
+        onTriggered: onTriggered,
+        child: child,
+      ),
     );
   }
 }
