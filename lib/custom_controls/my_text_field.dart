@@ -36,8 +36,8 @@ class MyTextField extends StatelessWidget {
     this.enabled,
     this.decoration,
     this.inputFormatters,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

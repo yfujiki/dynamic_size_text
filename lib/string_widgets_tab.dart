@@ -9,10 +9,10 @@ class StringWidgetsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: const [
+        children: [
           SizedBox(height: 16),
           MyText("Text widget", style: TextStyle(fontSize: 16)),
           SizedBox(height: 16),

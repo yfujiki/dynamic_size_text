@@ -40,8 +40,8 @@ class MyTextFormField extends StatelessWidget {
     this.validator,
     this.decoration,
     this.inputFormatters,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

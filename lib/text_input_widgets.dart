@@ -8,8 +8,8 @@ class TextInputWidgetsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(children: const [
+    return const Center(
+      child: Column(children: [
         SizedBox(height: 16),
         MyTextField(
           decoration: InputDecoration(
